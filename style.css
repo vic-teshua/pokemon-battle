@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: pink;
+}
+
+.main {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rosybrown;
+  width: 80%;
+  height: 600px;
+  padding: 20px;
+  margin: 5% auto;
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* figures container */
+.enemy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* border: 3px solid red; */
+  height: 100%;
+  width: 40%;
+  padding: 20px;
+}
+
+/* Description of each figure */
+.enemy .description {
+  font-size: 1.3rem;
+  line-height: 1rem;
+}
+
+.enemy .description h2 {
+  border-bottom: 2px solid rosybrown;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.enemy .description p {
+  text-align: left;
+  word-spacing: 5px;
+  margin-bottom: 4px;
+  line-height: 1.3rem;
+  font-size: 16px;
+}
+
+.progress-bar {
+  padding-top: 0;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+.moveFigure {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+@keyframes move {
+  33% {transform: translateX(3%)}
+  66%{transform:translateX(-3%);}
+}
+
+/* Middle section */
+.result {
+  height: 100%;
+}
+.result section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40%;
+}
+
+.result .round p {
+  background: white;
+  width: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.result section p {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-family: 'DotGothic16', sans-serif;
+  padding-bottom: 10px;
+}
+
+.result section p.showName {
+  text-transform: uppercase;
+  border-bottom: 2px solid rosybrown;
+}
+
+.result .button {
+  font-size: 2.5rem;
+  font-family: 'DotGothic16', sans-serif;
+  border: 2px solid rosybrown;
+  padding: 10px 20px;
+  border-radius: 20px;
+  letter-spacing: 4px;
+  box-shadow: 3px 3px 4px brown;
+  cursor: pointer;
+  width: 150px;
+}
+
+.result .button:hover {
+  transform: scale(1.1);
+}
